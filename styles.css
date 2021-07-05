@@ -1,0 +1,240 @@
+body {
+  background-image: url("images/bs-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.hero-section {
+  text-align: center;
+  margin: auto;
+  color: white;
+}
+
+.hero-section li {
+  display: inline;
+}
+
+.titulo-central {
+  padding-top: 30px;
+}
+
+.titulo-central h1 {
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  font-size: 60px;
+}
+
+.titulo-central h2 {
+  font-family: arial;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 80px;
+}
+
+.investidores {
+  color: white;
+  text-align: center;
+  margin: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #69523b;
+  background-color: #1b092d;
+  opacity: 75%;
+  padding-bottom: 12px;
+  margin: 30px 60px 40px 60px;
+}
+
+.investidores h4 {
+  font-family: arial;
+  font-weight: 550;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: -15px;
+}
+
+.lista_animada {
+  position: center;
+  margin-right: 2%;
+}
+
+.lista_animada h1 {
+  font-family: arial;
+  font-weight: 950;
+  text-align: center;
+  font-size: 15px;
+}
+
+.lista_animada h2 {
+  font-family: arial;
+  font-weight: 450;
+  text-align: center;
+  font-size: 16px;
+}
+
+.lista_animada li {
+  padding-right: 2%;
+  display: inline-block;
+}
+
+.lista_animada img {
+  margin-bottom: 10px;
+  width: 40px;
+  height: auto;
+  position: center;
+}
+
+.lista_animada p {
+  margin: -10px;
+}
+
+.investidores li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.investidores img {
+  width: 70px;
+  max-height: 60px;
+  position: center;
+  filter: grayscale(100);
+}
+
+.botao_download_hero {
+  letter-spacing: 0.1px;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  background-image: linear-gradient(to right, #df011f, #2e70b8);
+}
+
+.links_download a {
+  text-underline-position: under;
+  color: #5ca308;
+  font-family: arial;
+  font-size: 13px;
+  text-align: center;
+}
+
+.links_download {
+  font-family: arial;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.botao_download_topnav {
+  letter-spacing: 0.1px;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  padding: 15px 50px 15px 50px;
+  background-image: linear-gradient(to right, #df011f, #2e70b8);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-image: linear-gradient(to bottom, #0000005d, #2e71b800);
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.logo {
+  padding: auto;
+  background-image: url("images/bs-logo-new.png");
+  background-size: 80px;
+  margin-right: 20px;
+  float: left;
+  background-repeat: no-repeat;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  cursor: pointer;
+}
