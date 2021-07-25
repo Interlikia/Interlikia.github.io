@@ -15,6 +15,10 @@
 	</meta>
 	<meta name="author" content="Artur e Icaro">
 	</meta>
+
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link rel = "stylesheet" href = "loginStyle.css">
+	<link rel = "stylesheet" href = "apiStyle.css">
 </head>
 
 <body>
@@ -80,6 +84,7 @@
 				<a href="#">Lingua 3</a>
 			</div>
 		</div>
+		<button id="log_out_btn" class="submit_btn display_hidden">LogOut</button>
 		
 	</div>
 	<div class="content">
@@ -196,6 +201,60 @@
 			</ul>
 		</div>
 	</div>
-</body>
+	<div id="form_box" class = "form_box display_show">
+		<div class="button_box">
+			<div id="btn"> </div>
+			<button type="button" class ="toggle_btn" onclick="login()">Log In</button>
+			<button type="button" class="toggle_btn" onclick="register()">Register</button>
+		</div>
+		<div class="forms">
+			<form id="login" class="input_group">
+				<input type="text" id="user_login" class="input_field" placeholder="User Id" required>
+				<input type="text" id="user_password" class="input_field" placeholder="Enter Password" required>
+				<input type="checkbox" class="checkbox"><span class="login_checkbox">Remenber Password</span>
+				<button type="submit" class="submit_btn">Log In</button> 
+				<span id="error_login"></span>
+			</form>
+			<form id="register" class="input_group">
+				<!--<input type="text" id="registration_user" class="input_field" placeholder="User Id" required>-->
+				<input type="email" id="registration_email" class="input_field" placeholder="Email Id" required>
+				<input type="text" id="registration_password" class="input_field" placeholder="Enter Password" required>
+				<input type="checkbox" class="checkbox"><span class="login_checkbox">I Agree to the terms & conditions</span>
+				<button type="submit" class="submit_btn">Register</button>
+				<span id="error_register"></span>
+			</form>
+			
+		</div>
+	</div>
+	<script>
+		var registerBox = document.getElementById("register");
+		var loginBox = document.getElementById("login");
+		var btn = document.getElementById("btn");
+		
+		function register()
+		{
+			registerBox.style.left = "10px";
+			loginBox.style.left = "-400px";
+			btn.style.left = "110px";
+		}
 
+		function login()
+		{
+			registerBox.style.left = "450px";
+			loginBox.style.left = "10px";
+			btn.style.left = "0px"
+		}
+	</script>
+	<div id="search_box" class="display_hidden">
+		<form id="api_box">
+			<input type="text" id="search" class="input_field" placeholder="Title Search" required>
+			<button type="submit" class="submit_btn">Search</button> 
+		</form>
+	</div>
+	<div id="api_jikan" class="display_hidden">
+	</div>
+
+	<script src = "login.js"></script>
+	<script src ="jikanAPI.js"></script>
+</body>
 </html>
