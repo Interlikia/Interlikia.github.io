@@ -35,22 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(verifyPassword(document.getElementById("user_password")))
         {
-            axios.post('https://reqres.in/api/login', 
-            {
-                email: document.getElementById("user_login").value,
-                password: document.getElementById("user_password").value
+            axios.get('http://localhost:3000/auth/user/login', {
+                params:{
+                    email: document.getElementById("user_login").value,
+                    password: document.getElementById("user_password").value
+                }
             })
-            .then(function (response) 
-            {
+            .then(function (response){ 
                 console.log(response);
-                if(response.status === 200)
-                {
-                    localStorage.setItem('logged', 1)
+                if(response.status ===200){
+                    localStorage.setItem('token', response.data.data)
                     loggedIn();
                 }
             })
-            .catch(function (error) 
-            {
+            .catch(function(error){
                 console.log(error.response.data.error);
             });
         }else{
@@ -58,13 +56,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
 
+    
+
     registerForm.addEventListener("submit", e => {
 
         e.preventDefault();
 
         if(verifyPassword(document.getElementById("registration_password")))
         {
-            axios.post('https://reqres.in/api/register', 
+            axios.post('http://localhost:3000/auth/user/register', 
             {
                 email: document.getElementById("registration_email").value,
                 password: document.getElementById("registration_password").value

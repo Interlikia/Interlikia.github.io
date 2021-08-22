@@ -1,15 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const searchForm = document.querySelector("#api_box");
 
+  searchForm.addEventListener("submit", e => {
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const searchForm = document.querySelector("#api_box");
+    e.preventDefault();
+    document.getElementById("api_jikan").innerHTML = '';
 
-    searchForm.addEventListener("submit", e => {
-
-        e.preventDefault();
-        document.getElementById("api_jikan").innerHTML = '';
-
-        axios.get('https://api.jikan.moe/v3/search/anime?q=' + document.getElementById("search").value)
-        .then(function (response){ 
+    axios.get('https://api.jikan.moe/v3/search/anime?q=' + document.getElementById("search").value)
+      .then(function (response) {
         // handle success
         console.log(response);
 
@@ -28,15 +26,13 @@
           result.appendChild(img);
           apiJikan.appendChild(result);
         });
-        })
-        .catch(function (error) 
-        {
-          // handle error
-          console.log(error);
-        })
-        .then(function () 
-        {
-          // always executed
-        });
-    })
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+  })
 })
