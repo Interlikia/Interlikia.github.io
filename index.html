@@ -246,15 +246,24 @@
 		}
 	</script>
 	<div id="search_box" class="display_hidden">
+		<button id="btn_register" class="submit_btn">Cadastrar Anime</button>
 		<form id="api_box">
-			<input type="text" id="search" class="input_field" placeholder="Title Search" required>
-			<button type="submit" class="submit_btn">Search</button> 
+			<input type="text" id="search" class="input_field" placeholder="Título" required>
+			<button type="submit" class="submit_btn">Procurar</button> 
 		</form>
 	</div>
-	<div id="api_jikan" class="display_hidden">
+	<div id="register_box" class="display_hidden">
+		<button id="btn_search" class="submit_btn">Procurar Anime</button>
+		<form id="api_box_register">
+			<input type="text" id="register_title" class="input_field" placeholder="Título" required>
+			<input type="text" id="register_img" class="input_field" placeholder="Link da Imagem" required>
+			<button type="submit" class="submit_btn">Cadastrar Anime</button>
+		</form>
+	</div>
+	<div id="api_anime" class="display_hidden">
 	</div>
 
 	<script src = "login.js"></script>
-	<script src ="jikanAPI.js"></script>
+	<script src = "animeAPI.js"></script>
 </body>
 </html>

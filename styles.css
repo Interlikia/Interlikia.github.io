@@ -239,7 +239,7 @@ body {
   cursor: pointer;
 }
 
-#api_jikan {
+#api_anime {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -247,7 +247,7 @@ body {
   margin-right: 5%;
 }
 
-#api_jikan div{
+#api_anime div{
   display: flex;
   text-align: center;
   width: min-content;
@@ -256,11 +256,11 @@ body {
   justify-content: center;
 }
 
-#api_jikan span{
+#api_anime span{
   color: antiquewhite;
 }
 
-#api_jikan img{
+#api_anime img{
   height: 350px;
   max-width: 225px;
   margin-top: 3%;

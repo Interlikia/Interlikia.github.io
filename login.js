@@ -1,9 +1,9 @@
-if(localStorage.getItem("logged") !== null) {
+if(localStorage.getItem("token") !== null) {
 
     loggedIn();
 
 } else {
-
+    
     loggedOut();
 
 }
@@ -93,8 +93,8 @@ function loggedIn()
 {
     document.getElementById("form_box").classList.remove('display_show');
     document.getElementById("form_box").classList.add('display_hidden');
-    document.getElementById("api_jikan").classList.remove('display_hidden');
-    document.getElementById("api_jikan").classList.add('display_show');
+    document.getElementById("api_anime").classList.remove('display_hidden');
+    document.getElementById("api_anime").classList.add('display_show');
     document.getElementById("search_box").classList.remove('display_hidden');
     document.getElementById("search_box").classList.add('display_show');
     document.getElementById("log_out_btn").classList.remove('display_hidden');
@@ -106,11 +106,11 @@ function loggedIn()
 
 function loggedOut()
 {
-    localStorage.removeItem("logged");
+    localStorage.removeItem("token");
     document.getElementById("form_box").classList.remove('display_hidden');
     document.getElementById("form_box").classList.add('display_show');
-    document.getElementById("api_jikan").classList.remove('display_show');
-    document.getElementById("api_jikan").classList.add('display_hidden');
+    document.getElementById("api_anime").classList.remove('display_show');
+    document.getElementById("api_anime").classList.add('display_hidden');
     document.getElementById("search_box").classList.remove('display_show');
     document.getElementById("search_box").classList.add('display_hidden');
     document.getElementById("log_out_btn").classList.remove('display_show');
