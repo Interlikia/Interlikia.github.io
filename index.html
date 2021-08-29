@@ -208,18 +208,23 @@
 			<button type="button" class="toggle_btn" onclick="register()">Register</button>
 		</div>
 		<div class="forms">
-			<form id="login" class="input_group">
-				<input type="text" id="user_login" class="input_field" placeholder="User Id" required>
-				<input type="text" id="user_password" class="input_field" placeholder="Enter Password" required>
-				<input type="checkbox" class="checkbox"><span class="login_checkbox">Remenber Password</span>
+			<form autocomplete="off" id="login" class="input_group">
+				<input type="text" id="user_login" class="input_field" autofocus placeholder="Email Id">
+				<input type="password" id="user_password" class="input_field" autofocus placeholder="Enter Password">
+				<div style="flex-direction: row;">
+					<input type="checkbox" class="checkbox">
+					<span class="login_checkbox">Remember Password</span>
+				</div>
 				<button type="submit" class="submit_btn">Log In</button> 
 				<span id="error_login"></span>
 			</form>
-			<form id="register" class="input_group">
-				<!--<input type="text" id="registration_user" class="input_field" placeholder="User Id" required>-->
-				<input type="email" id="registration_email" class="input_field" placeholder="Email Id" required>
-				<input type="text" id="registration_password" class="input_field" placeholder="Enter Password" required>
-				<input type="checkbox" class="checkbox"><span class="login_checkbox">I Agree to the terms & conditions</span>
+			<form autocomplete="off" id="register" class="input_group">
+				<input type="text" id="registration_email" class="input_field" autofocus placeholder="Email Id">
+				<input type="password" id="registration_password" class="input_field" autofocus placeholder="Enter Password">
+				<div style="flex-direction: row;">
+					<input type="checkbox" class="checkbox">
+					<span class="login_checkbox">I Agree to the terms & conditions</span>
+				</div>
 				<button type="submit" class="submit_btn">Register</button>
 				<span id="error_register"></span>
 			</form>
@@ -246,18 +251,33 @@
 		}
 	</script>
 	<div id="search_box" class="display_hidden">
+		<div style='color: white; text-align: center;'>
+			<h1>Anime API</h1>
+			<h2>Busca de animes</h2>
+			<h2>Para utilizar a API, por favor insira o nome do anime que procura na barra de pesquisa e clique em Procurar</h2>
+			<h2>Caso deseje inserir um novo anime no banco de dados clique no botão Cadastrar Anime</h2>
+		</div>
 		<button id="btn_register" class="submit_btn">Cadastrar Anime</button>
-		<form id="api_box">
-			<input type="text" id="search" class="input_field" placeholder="Título" required>
-			<button type="submit" class="submit_btn">Procurar</button> 
+		<form autocomplete="off" id="api_box">
+			<input type="text" id="search" class="input_field" autofocus placeholder="Título">
+			<button type="submit" class="submit_btn">Procurar</button>
+			<div id="anime_search_message" style="color: red; text-align: center;"></div>
 		</form>
 	</div>
 	<div id="register_box" class="display_hidden">
+		<div style='color: white; text-align: center;'>
+			<h1>Anime API</h1>
+			<h2>Cadastro de animes</h2>
+			<h2>Para cadastrar um anime insira o titulo do anime e uma url para a imagem de capa</h2>
+			<h2>Caso deseje pesquisar um anime no banco de dados clique no botão Procurar Anime</h2>
+		</div>
 		<button id="btn_search" class="submit_btn">Procurar Anime</button>
-		<form id="api_box_register">
-			<input type="text" id="register_title" class="input_field" placeholder="Título" required>
-			<input type="text" id="register_img" class="input_field" placeholder="Link da Imagem" required>
+		<form autocomplete="off" id="api_box_register">
+			<input type="text" id="register_title" class="input_field" autofocus placeholder="Título">
+			<input type="text" id="register_img" class="input_field" autofocus placeholder="Link da Imagem">
 			<button type="submit" class="submit_btn">Cadastrar Anime</button>
+			<div id="anime_register_message" style="color: green; text-align: center;"></div>
+			<div id="anime_register_error" style="color: red; text-align: center;"></div>
 		</form>
 	</div>
 	<div id="api_anime" class="display_hidden">
